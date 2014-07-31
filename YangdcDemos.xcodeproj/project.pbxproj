@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70449FC51980FC1800587F9D /* YDCImageDowload.m in Sources */ = {isa = PBXBuildFile; fileRef = 70449FC41980FC1800587F9D /* YDCImageDowload.m */; };
 		704F7CC2197FA89C00CEFE37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC1197FA89C00CEFE37 /* Foundation.framework */; };
 		704F7CC4197FA89C00CEFE37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC3197FA89C00CEFE37 /* CoreGraphics.framework */; };
 		704F7CC6197FA89C00CEFE37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC5197FA89C00CEFE37 /* UIKit.framework */; };
@@ -54,6 +55,10 @@
 		704F7D5D197FA97700CEFE37 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 704F7D39197FA97700CEFE37 /* unzip.c */; };
 		704F7D5E197FA97700CEFE37 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 704F7D3B197FA97700CEFE37 /* zip.c */; };
 		704F7D5F197FA97700CEFE37 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7D3E197FA97700CEFE37 /* Tool.m */; };
+		704F7D63197FB84900CEFE37 /* KMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 704F7D62197FB84900CEFE37 /* KMP.m */; };
+		7051489F19876C15007682F2 /* AMPopTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 7051489E19876C15007682F2 /* AMPopTip.m */; };
+		705148A31987946E007682F2 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 705148A11987946E007682F2 /* TestViewController.m */; };
+		705148A41987946E007682F2 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705148A21987946E007682F2 /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70449FC31980FC1800587F9D /* YDCImageDowload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YDCImageDowload.h; path = NSOperationImageDowload/YDCImageDowload.h; sourceTree = "<group>"; };
+		70449FC41980FC1800587F9D /* YDCImageDowload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YDCImageDowload.m; path = NSOperationImageDowload/YDCImageDowload.m; sourceTree = "<group>"; };
 		704F7CBE197FA89C00CEFE37 /* YangdcDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangdcDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704F7CC1197FA89C00CEFE37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		704F7CC3197FA89C00CEFE37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +155,13 @@
 		704F7D3C197FA97700CEFE37 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		704F7D3D197FA97700CEFE37 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		704F7D3E197FA97700CEFE37 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		704F7D61197FB84900CEFE37 /* KMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMP.h; sourceTree = "<group>"; };
+		704F7D62197FB84900CEFE37 /* KMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMP.m; sourceTree = "<group>"; };
+		7051489D19876C15007682F2 /* AMPopTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopTip.h; sourceTree = "<group>"; };
+		7051489E19876C15007682F2 /* AMPopTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopTip.m; sourceTree = "<group>"; };
+		705148A01987946E007682F2 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		705148A11987946E007682F2 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		705148A21987946E007682F2 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70449FC21980FBCB00587F9D /* NSOperationImageDowload */ = {
+			isa = PBXGroup;
+			children = (
+				70449FC31980FC1800587F9D /* YDCImageDowload.h */,
+				70449FC41980FC1800587F9D /* YDCImageDowload.m */,
+			);
+			name = NSOperationImageDowload;
+			sourceTree = "<group>";
+		};
 		704F7CB5197FA89C00CEFE37 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +241,9 @@
 				704F7CD1197FA89C00CEFE37 /* AppDelegate.m */,
 				704F7CD3197FA89C00CEFE37 /* Images.xcassets */,
 				704F7CC8197FA89C00CEFE37 /* Supporting Files */,
+				705148A01987946E007682F2 /* TestViewController.h */,
+				705148A11987946E007682F2 /* TestViewController.m */,
+				705148A21987946E007682F2 /* TestViewController.xib */,
 			);
 			path = YangdcDemos;
 			sourceTree = "<group>";
@@ -254,6 +280,9 @@
 		704F7CF5197FA97700CEFE37 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				7051489C19876C15007682F2 /* AMPopTip */,
+				70449FC21980FBCB00587F9D /* NSOperationImageDowload */,
+				704F7D60197FB6DE00CEFE37 /* KMP */,
 				704F7CF6197FA97700CEFE37 /* AES */,
 				704F7CFF197FA97700CEFE37 /* Appirater */,
 				704F7D03197FA97700CEFE37 /* ImageTool */,
@@ -399,6 +428,24 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
+		704F7D60197FB6DE00CEFE37 /* KMP */ = {
+			isa = PBXGroup;
+			children = (
+				704F7D61197FB84900CEFE37 /* KMP.h */,
+				704F7D62197FB84900CEFE37 /* KMP.m */,
+			);
+			path = KMP;
+			sourceTree = "<group>";
+		};
+		7051489C19876C15007682F2 /* AMPopTip */ = {
+			isa = PBXGroup;
+			children = (
+				7051489D19876C15007682F2 /* AMPopTip.h */,
+				7051489E19876C15007682F2 /* AMPopTip.m */,
+			);
+			path = AMPopTip;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +525,7 @@
 				704F7D54197FA97700CEFE37 /* remind_noimage@2x.png in Resources */,
 				704F7CCC197FA89C00CEFE37 /* InfoPlist.strings in Resources */,
 				704F7CD4197FA89C00CEFE37 /* Images.xcassets in Resources */,
+				705148A41987946E007682F2 /* TestViewController.xib in Resources */,
 				704F7D49197FA97700CEFE37 /* ImageNSOperationViewController.xib in Resources */,
 				704F7D56197FA97700CEFE37 /* SDWebImageController_iphone.xib in Resources */,
 				704F7D5A197FA97700CEFE37 /* SVProgressHUDViewController.xib in Resources */,
@@ -506,6 +554,7 @@
 				704F7D4F197FA97700CEFE37 /* SDWebImageManager.m in Sources */,
 				704F7D46197FA97700CEFE37 /* UIImage+MultiFormat.m in Sources */,
 				704F7D5F197FA97700CEFE37 /* Tool.m in Sources */,
+				704F7D63197FB84900CEFE37 /* KMP.m in Sources */,
 				704F7D51197FA97700CEFE37 /* UIImageView+LK.m in Sources */,
 				704F7D59197FA97700CEFE37 /* SVProgressHUDViewController.m in Sources */,
 				704F7CD2197FA89C00CEFE37 /* AppDelegate.m in Sources */,
@@ -514,14 +563,17 @@
 				704F7D4C197FA97700CEFE37 /* SDWebImageDecoder.m in Sources */,
 				704F7D58197FA97700CEFE37 /* SVProgressHUD.m in Sources */,
 				704F7D5C197FA97700CEFE37 /* mztools.c in Sources */,
+				7051489F19876C15007682F2 /* AMPopTip.m in Sources */,
 				704F7D4E197FA97700CEFE37 /* SDWebImageDownloaderOperation.m in Sources */,
 				704F7D52197FA97700CEFE37 /* UIImageView+WebCache.m in Sources */,
+				705148A31987946E007682F2 /* TestViewController.m in Sources */,
 				704F7D4D197FA97700CEFE37 /* SDWebImageDownloader.m in Sources */,
 				704F7D40197FA97700CEFE37 /* NSData+Base64.m in Sources */,
 				704F7D41197FA97700CEFE37 /* NSData+CommonCrypto.m in Sources */,
 				704F7D5D197FA97700CEFE37 /* unzip.c in Sources */,
 				704F7D43197FA97700CEFE37 /* Appirater.m in Sources */,
 				704F7D3F197FA97700CEFE37 /* AESCrypt.m in Sources */,
+				70449FC51980FC1800587F9D /* YDCImageDowload.m in Sources */,
 				704F7D55197FA97700CEFE37 /* SDWebImageController.m in Sources */,
 				704F7D4A197FA97700CEFE37 /* SDImageCache.m in Sources */,
 				704F7D48197FA97700CEFE37 /* ImageNSOperationViewController.m in Sources */,
@@ -727,6 +779,7 @@
 				704F7CEC197FA89C00CEFE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		704F7CED197FA89C00CEFE37 /* Build configuration list for PBXNativeTarget "YangdcDemosTests" */ = {
 			isa = XCConfigurationList;
@@ -735,6 +788,7 @@
 				704F7CEF197FA89C00CEFE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

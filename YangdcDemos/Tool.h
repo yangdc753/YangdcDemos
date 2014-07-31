@@ -20,6 +20,7 @@
 
 @interface Tool : NSObject
 
++ (NSArray*)getFilenamelistfromDirPath:(NSString *)dirPath;
 
 + (NSDate *)dateStartOfWeek:(NSDate *)date;
 @end

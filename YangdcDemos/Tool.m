@@ -10,6 +10,18 @@
 
 @implementation Tool
 
+
+//获取目录下
++ (NSArray*)getFilenamelistfromDirPath:(NSString *)dirPath{
+    NSMutableArray *filenamelist = [NSMutableArray arrayWithCapacity:100];
+    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
+    for (NSString *filename in tmplist) {
+        
+    }
+    
+    return filenamelist;
+}
+
 //date所在的周的星期一
 + (NSDate *)dateStartOfWeek:(NSDate *)date {
     NSCalendar *gregorian = [[NSCalendar alloc]

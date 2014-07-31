@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "Tool.h"
 @interface YangdcDemosTests : XCTestCase
 
 @end
@@ -29,6 +29,11 @@
 - (void)testExample
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)test1{
+    [Tool getFilenamelistfromDirPath:@"/Users/ydc/Library/Application Support/iPhone Simulator/7.1-64/Applications/7232BB38-135C-4C16-B0BA-4ED9CB609964/Library/Caches/558bf1819356f1e7ccdb0be3ab0535fd/contents/thumbnail"];
+    
 }
 
 @end

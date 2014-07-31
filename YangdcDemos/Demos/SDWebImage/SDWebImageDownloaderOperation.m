@@ -133,9 +133,6 @@
     if (self.connection) {
         [self.connection cancel];
         [[NSNotificationCenter defaultCenter] postNotificationName:SDWebImageDownloadStopNotification object:self];
-
-        // As we cancelled the connection, its callback won't be called and thus won't
-        // maintain the isFinished and isExecuting flags.
         if (self.isExecuting) self.executing = NO;
         if (!self.isFinished) self.finished = YES;
     }
