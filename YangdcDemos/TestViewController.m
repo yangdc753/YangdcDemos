@@ -19,7 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self.web loadRequest:[[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"wwww.baidu.com"]]];
     }
     return self;
 }
@@ -27,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.web loadRequest:[[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -37,7 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)test:(id)sender {
-    NSLog([self.web stringByEvaluatingJavaScriptFromString:@"window.location.href"]);
+//    NSLog([self.web stringByEvaluatingJavaScriptFromString:@"window.location.href"]);
+    QLPreviewController *qlprview = [[QLPreviewController alloc]init];
+    qlprview.delegate = self;
+    qlprview.dataSource = self;
+    
+    [self addObserver:self forKeyPath:@"self.historyDetailController.retainCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
 @end

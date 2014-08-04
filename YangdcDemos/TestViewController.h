@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuickLook/QuickLook.h>
 
-@interface TestViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIWebView *web;
+@interface TestViewController : UIViewController<QLPreviewControllerDelegate>
 
 @end

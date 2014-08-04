@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70449FC51980FC1800587F9D /* YDCImageDowload.m in Sources */ = {isa = PBXBuildFile; fileRef = 70449FC41980FC1800587F9D /* YDCImageDowload.m */; };
+		704C57801989DC1A003EA19B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704C577F1989DC1A003EA19B /* QuickLook.framework */; };
 		704F7CC2197FA89C00CEFE37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC1197FA89C00CEFE37 /* Foundation.framework */; };
 		704F7CC4197FA89C00CEFE37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC3197FA89C00CEFE37 /* CoreGraphics.framework */; };
 		704F7CC6197FA89C00CEFE37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC5197FA89C00CEFE37 /* UIKit.framework */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		70449FC31980FC1800587F9D /* YDCImageDowload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YDCImageDowload.h; path = NSOperationImageDowload/YDCImageDowload.h; sourceTree = "<group>"; };
 		70449FC41980FC1800587F9D /* YDCImageDowload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YDCImageDowload.m; path = NSOperationImageDowload/YDCImageDowload.m; sourceTree = "<group>"; };
+		704C577F1989DC1A003EA19B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		704F7CBE197FA89C00CEFE37 /* YangdcDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangdcDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704F7CC1197FA89C00CEFE37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		704F7CC3197FA89C00CEFE37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704C57801989DC1A003EA19B /* QuickLook.framework in Frameworks */,
 				704F7CF3197FA8BB00CEFE37 /* AVFoundation.framework in Frameworks */,
 				704F7CF1197FA8B600CEFE37 /* libz.dylib in Frameworks */,
 				704F7CC4197FA89C00CEFE37 /* CoreGraphics.framework in Frameworks */,
@@ -221,6 +224,7 @@
 		704F7CC0197FA89C00CEFE37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				704C577F1989DC1A003EA19B /* QuickLook.framework */,
 				704F7CF2197FA8BB00CEFE37 /* AVFoundation.framework */,
 				704F7CF0197FA8B600CEFE37 /* libz.dylib */,
 				704F7CC1197FA89C00CEFE37 /* Foundation.framework */,
