@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TestViewController.h"
+#import <objc/runtime.h>
 
 @implementation AppDelegate
 
@@ -16,7 +17,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //处理崩溃情况
     NSSetUncaughtExceptionHandler (&CrashHandlerExceptionHandler);
-    [self redirectNSlogToDocumentFolder];
+//    [self redirectNSlogToDocumentFolder];
+//    [self test];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
@@ -24,9 +26,36 @@
     return YES;
 }
 
+- (void)test{
+    //知道怎么用私有api，要怎么获得
+    //要导入#import <objc/runtime.h>
+    NSString *className = NSStringFromClass([UIView class]);
+    //这里是uiview，可以改成自己想要的
+    
+    const char *cClassName = [className UTF8String];
+    
+    id theClass = objc_getClass(cClassName);
+    
+    unsigned int outCount;
+    
+    Method *m = class_copyMethodList(theClass,&outCount);
+    
+    NSLog(@"q%d",outCount);
+    for (int i = 0; i<outCount; i++) {
+        SEL a = method_getName(*(m+i));
+        NSString *sn = NSStringFromSelector(a);
+        NSLog(@"q%@",sn);
+    }
+}
 //处理崩溃情况
 void CrashHandlerExceptionHandler(NSException *exception) {
-    NSLog(@"崩了%@",[exception userInfo]);
+    NSLog(@"name: %@ \
+          reason: %@ \
+          userInfo: %@"
+          ,[exception name],[exception reason],[exception userInfo]);
+    for (NSString *callStackSymbol in [exception callStackSymbols]) {
+        NSLog(@"%@",callStackSymbol);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
