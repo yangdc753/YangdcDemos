@@ -14,11 +14,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //处理崩溃情况
+    NSSetUncaughtExceptionHandler (&CrashHandlerExceptionHandler);
+    [self redirectNSlogToDocumentFolder];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+//处理崩溃情况
+void CrashHandlerExceptionHandler(NSException *exception) {
+    NSLog(@"崩了%@",[exception userInfo]);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -46,6 +54,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//把NSLog日志写入文件
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (void)redirectNSlogToDocumentFolder
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"dr.log"];
+    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
+    
+    // 将log输入到文件
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding], "a+", stdout);
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding], "a+", stderr);
 }
 
 @end
