@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TestViewController.h"
 #import <objc/runtime.h>
-
+#import "Reachability.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
