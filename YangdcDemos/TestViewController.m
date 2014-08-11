@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 
 @interface TestViewController ()
+@property (strong, nonatomic) IBOutlet UITextView *testview;
 
 @end
 
@@ -39,7 +40,21 @@
 //    QLPreviewController *qlprview = [[QLPreviewController alloc]init];
 //    qlprview.delegate = self;
 //    qlprview.dataSource = self;
-    [self addObserver:self forKeyPath:@"self.historyDetailController.retainCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+//    [self addObserver:self forKeyPath:@"self.historyDetailController.retainCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+  
+    
+}
+- (UIImage *)getImage:(UIView*)view{
+    if(UIGraphicsBeginImageContextWithOptions != NULL)
+    {
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
+    } else {
+        UIGraphicsBeginImageContext(view.frame.size);
+    }
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
