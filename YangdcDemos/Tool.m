@@ -14,11 +14,10 @@
 //获取目录下
 + (NSArray*)getFilenamelistfromDirPath:(NSString *)dirPath{
     NSMutableArray *filenamelist = [NSMutableArray arrayWithCapacity:100];
-    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
-    for (NSString *filename in tmplist) {
-        
-    }
-    
+//    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
+//    for (NSString *filename in tmplist) {
+//        
+//    }
     return filenamelist;
 }
 

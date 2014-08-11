@@ -61,6 +61,18 @@
 		7051489F19876C15007682F2 /* AMPopTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 7051489E19876C15007682F2 /* AMPopTip.m */; };
 		705148A31987946E007682F2 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 705148A11987946E007682F2 /* TestViewController.m */; };
 		705148A41987946E007682F2 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705148A21987946E007682F2 /* TestViewController.xib */; };
+		70572033199866D30049C764 /* NSString+TypeScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 70572032199866D30049C764 /* NSString+TypeScan.m */; };
+		7057203619986E420049C764 /* NSString+STRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057203519986E420049C764 /* NSString+STRegex.m */; };
+		7057204019986EF60049C764 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057203919986EF60049C764 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7057204119986EF60049C764 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057203C19986EF60049C764 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		70572051199881EF0049C764 /* STAppUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70572045199881EF0049C764 /* STAppUpdate.m */; };
+		70572052199881EF0049C764 /* STBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70572047199881EF0049C764 /* STBaseViewController.m */; };
+		70572053199881EF0049C764 /* STDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 70572049199881EF0049C764 /* STDb.m */; };
+		70572054199881EF0049C764 /* STDbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057204B199881EF0049C764 /* STDbObject.m */; };
+		70572055199881EF0049C764 /* STRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057204E199881EF0049C764 /* STRequest.m */; };
+		70572056199881EF0049C764 /* STSystemUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70572050199881EF0049C764 /* STSystemUtils.m */; };
+		70572058199885550049C764 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70572057199885550049C764 /* libsqlite3.0.dylib */; };
+		7057205A199885980049C764 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70572059199885980049C764 /* MessageUI.framework */; };
 		70DD3195198F29ED003B649D /* Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DD3194198F29ED003B649D /* Localization.m */; };
 		70DD319C198F2B9C003B649D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DD319B198F2B9C003B649D /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -168,6 +180,29 @@
 		705148A01987946E007682F2 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		705148A11987946E007682F2 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		705148A21987946E007682F2 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		70572031199866D30049C764 /* NSString+TypeScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TypeScan.h"; path = "Categories/NSString+TypeScan.h"; sourceTree = "<group>"; };
+		70572032199866D30049C764 /* NSString+TypeScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TypeScan.m"; path = "Categories/NSString+TypeScan.m"; sourceTree = "<group>"; };
+		7057203419986E420049C764 /* NSString+STRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+STRegex.h"; path = "Categories/NSString+STRegex.h"; sourceTree = "<group>"; };
+		7057203519986E420049C764 /* NSString+STRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+STRegex.m"; path = "Categories/NSString+STRegex.m"; sourceTree = "<group>"; };
+		7057203819986EF60049C764 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		7057203919986EF60049C764 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		7057203B19986EF60049C764 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7057203C19986EF60049C764 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		70572044199881EF0049C764 /* STAppUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAppUpdate.h; sourceTree = "<group>"; };
+		70572045199881EF0049C764 /* STAppUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAppUpdate.m; sourceTree = "<group>"; };
+		70572046199881EF0049C764 /* STBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBaseViewController.h; sourceTree = "<group>"; };
+		70572047199881EF0049C764 /* STBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBaseViewController.m; sourceTree = "<group>"; };
+		70572048199881EF0049C764 /* STDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDb.h; sourceTree = "<group>"; };
+		70572049199881EF0049C764 /* STDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDb.m; sourceTree = "<group>"; };
+		7057204A199881EF0049C764 /* STDbObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbObject.h; sourceTree = "<group>"; };
+		7057204B199881EF0049C764 /* STDbObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDbObject.m; sourceTree = "<group>"; };
+		7057204C199881EF0049C764 /* STQuickKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQuickKit.h; sourceTree = "<group>"; };
+		7057204D199881EF0049C764 /* STRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRequest.h; sourceTree = "<group>"; };
+		7057204E199881EF0049C764 /* STRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRequest.m; sourceTree = "<group>"; };
+		7057204F199881EF0049C764 /* STSystemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSystemUtils.h; sourceTree = "<group>"; };
+		70572050199881EF0049C764 /* STSystemUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSystemUtils.m; sourceTree = "<group>"; };
+		70572057199885550049C764 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		70572059199885980049C764 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		70DD3193198F29ED003B649D /* Localization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Localization.h; sourceTree = "<group>"; };
 		70DD3194198F29ED003B649D /* Localization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Localization.m; sourceTree = "<group>"; };
 		70DD319B198F2B9C003B649D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -178,6 +213,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7057205A199885980049C764 /* MessageUI.framework in Frameworks */,
+				70572058199885550049C764 /* libsqlite3.0.dylib in Frameworks */,
 				70DD319C198F2B9C003B649D /* CoreData.framework in Frameworks */,
 				704C57801989DC1A003EA19B /* QuickLook.framework in Frameworks */,
 				704F7CF3197FA8BB00CEFE37 /* AVFoundation.framework in Frameworks */,
@@ -242,6 +279,8 @@
 		704F7CC0197FA89C00CEFE37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70572059199885980049C764 /* MessageUI.framework */,
+				70572057199885550049C764 /* libsqlite3.0.dylib */,
 				70DD319B198F2B9C003B649D /* CoreData.framework */,
 				704C577F1989DC1A003EA19B /* QuickLook.framework */,
 				704F7CF2197FA8BB00CEFE37 /* AVFoundation.framework */,
@@ -257,6 +296,7 @@
 		704F7CC7197FA89C00CEFE37 /* YangdcDemos */ = {
 			isa = PBXGroup;
 			children = (
+				7057202D1998666A0049C764 /* Categories */,
 				704F7CF5197FA97700CEFE37 /* Demos */,
 				704F7D3D197FA97700CEFE37 /* Tool.h */,
 				704F7D3E197FA97700CEFE37 /* Tool.m */,
@@ -303,6 +343,9 @@
 		704F7CF5197FA97700CEFE37 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				70572043199881EF0049C764 /* STQuickKit */,
+				7057203719986EF60049C764 /* OpenUDID */,
+				7057203A19986EF60049C764 /* Reachability */,
 				703A7B48198F292300E6ACFD /* CoreData */,
 				7051489C19876C15007682F2 /* AMPopTip */,
 				70449FC21980FBCB00587F9D /* NSOperationImageDowload */,
@@ -470,6 +513,55 @@
 			path = AMPopTip;
 			sourceTree = "<group>";
 		};
+		7057202D1998666A0049C764 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7057203419986E420049C764 /* NSString+STRegex.h */,
+				7057203519986E420049C764 /* NSString+STRegex.m */,
+				70572031199866D30049C764 /* NSString+TypeScan.h */,
+				70572032199866D30049C764 /* NSString+TypeScan.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		7057203719986EF60049C764 /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				7057203819986EF60049C764 /* OpenUDID.h */,
+				7057203919986EF60049C764 /* OpenUDID.m */,
+			);
+			path = OpenUDID;
+			sourceTree = "<group>";
+		};
+		7057203A19986EF60049C764 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7057203B19986EF60049C764 /* Reachability.h */,
+				7057203C19986EF60049C764 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		70572043199881EF0049C764 /* STQuickKit */ = {
+			isa = PBXGroup;
+			children = (
+				70572044199881EF0049C764 /* STAppUpdate.h */,
+				70572045199881EF0049C764 /* STAppUpdate.m */,
+				70572046199881EF0049C764 /* STBaseViewController.h */,
+				70572047199881EF0049C764 /* STBaseViewController.m */,
+				70572048199881EF0049C764 /* STDb.h */,
+				70572049199881EF0049C764 /* STDb.m */,
+				7057204A199881EF0049C764 /* STDbObject.h */,
+				7057204B199881EF0049C764 /* STDbObject.m */,
+				7057204C199881EF0049C764 /* STQuickKit.h */,
+				7057204D199881EF0049C764 /* STRequest.h */,
+				7057204E199881EF0049C764 /* STRequest.m */,
+				7057204F199881EF0049C764 /* STSystemUtils.h */,
+				70572050199881EF0049C764 /* STSystemUtils.m */,
+			);
+			path = STQuickKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -574,23 +666,31 @@
 			files = (
 				704F7D45197FA97700CEFE37 /* UIImage+GIF.m in Sources */,
 				704F7D47197FA97700CEFE37 /* ImageDownloader.m in Sources */,
+				70572053199881EF0049C764 /* STDb.m in Sources */,
 				704F7D42197FA97700CEFE37 /* NSString+Base64.m in Sources */,
 				704F7D4F197FA97700CEFE37 /* SDWebImageManager.m in Sources */,
 				704F7D46197FA97700CEFE37 /* UIImage+MultiFormat.m in Sources */,
 				704F7D5F197FA97700CEFE37 /* Tool.m in Sources */,
 				704F7D63197FB84900CEFE37 /* KMP.m in Sources */,
 				704F7D51197FA97700CEFE37 /* UIImageView+LK.m in Sources */,
+				7057203619986E420049C764 /* NSString+STRegex.m in Sources */,
 				704F7D59197FA97700CEFE37 /* SVProgressHUDViewController.m in Sources */,
 				704F7CD2197FA89C00CEFE37 /* AppDelegate.m in Sources */,
 				704F7D4B197FA97700CEFE37 /* SDWebImageCompat.m in Sources */,
 				704F7D44197FA97700CEFE37 /* NSData+ImageContentType.m in Sources */,
+				7057204119986EF60049C764 /* Reachability.m in Sources */,
 				704F7D4C197FA97700CEFE37 /* SDWebImageDecoder.m in Sources */,
 				704F7D58197FA97700CEFE37 /* SVProgressHUD.m in Sources */,
 				704F7D5C197FA97700CEFE37 /* mztools.c in Sources */,
 				7051489F19876C15007682F2 /* AMPopTip.m in Sources */,
+				70572033199866D30049C764 /* NSString+TypeScan.m in Sources */,
 				704F7D4E197FA97700CEFE37 /* SDWebImageDownloaderOperation.m in Sources */,
+				70572052199881EF0049C764 /* STBaseViewController.m in Sources */,
 				70DD3195198F29ED003B649D /* Localization.m in Sources */,
+				70572054199881EF0049C764 /* STDbObject.m in Sources */,
 				704F7D52197FA97700CEFE37 /* UIImageView+WebCache.m in Sources */,
+				70572056199881EF0049C764 /* STSystemUtils.m in Sources */,
+				7057204019986EF60049C764 /* OpenUDID.m in Sources */,
 				705148A31987946E007682F2 /* TestViewController.m in Sources */,
 				704F7D4D197FA97700CEFE37 /* SDWebImageDownloader.m in Sources */,
 				704F7D40197FA97700CEFE37 /* NSData+Base64.m in Sources */,
@@ -601,12 +701,14 @@
 				703A7B47198F290D00E6ACFD /* Model.xcdatamodeld in Sources */,
 				70449FC51980FC1800587F9D /* YDCImageDowload.m in Sources */,
 				704F7D55197FA97700CEFE37 /* SDWebImageController.m in Sources */,
+				70572055199881EF0049C764 /* STRequest.m in Sources */,
 				704F7D4A197FA97700CEFE37 /* SDImageCache.m in Sources */,
 				704F7D48197FA97700CEFE37 /* ImageNSOperationViewController.m in Sources */,
 				704F7CCE197FA89C00CEFE37 /* main.m in Sources */,
 				704F7D5E197FA97700CEFE37 /* zip.c in Sources */,
 				704F7D50197FA97700CEFE37 /* THProgressView.m in Sources */,
 				704F7D5B197FA97700CEFE37 /* ioapi.c in Sources */,
+				70572051199881EF0049C764 /* STAppUpdate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
