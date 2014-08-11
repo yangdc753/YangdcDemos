@@ -73,6 +73,8 @@
 		70572056199881EF0049C764 /* STSystemUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70572050199881EF0049C764 /* STSystemUtils.m */; };
 		70572058199885550049C764 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70572057199885550049C764 /* libsqlite3.0.dylib */; };
 		7057205A199885980049C764 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70572059199885980049C764 /* MessageUI.framework */; };
+		70572060199892470049C764 /* XHHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057205D199892470049C764 /* XHHTTPClient.m */; };
+		70572061199892470049C764 /* XHOperationNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7057205F199892470049C764 /* XHOperationNetworkKit.m */; };
 		70DD3195198F29ED003B649D /* Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DD3194198F29ED003B649D /* Localization.m */; };
 		70DD319C198F2B9C003B649D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DD319B198F2B9C003B649D /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -203,6 +205,10 @@
 		70572050199881EF0049C764 /* STSystemUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSystemUtils.m; sourceTree = "<group>"; };
 		70572057199885550049C764 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		70572059199885980049C764 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7057205C199892470049C764 /* XHHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHHTTPClient.h; path = OperationNetworkKit/XHHTTPClient.h; sourceTree = "<group>"; };
+		7057205D199892470049C764 /* XHHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHHTTPClient.m; path = OperationNetworkKit/XHHTTPClient.m; sourceTree = "<group>"; };
+		7057205E199892470049C764 /* XHOperationNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHOperationNetworkKit.h; path = OperationNetworkKit/XHOperationNetworkKit.h; sourceTree = "<group>"; };
+		7057205F199892470049C764 /* XHOperationNetworkKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHOperationNetworkKit.m; path = OperationNetworkKit/XHOperationNetworkKit.m; sourceTree = "<group>"; };
 		70DD3193198F29ED003B649D /* Localization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Localization.h; sourceTree = "<group>"; };
 		70DD3194198F29ED003B649D /* Localization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Localization.m; sourceTree = "<group>"; };
 		70DD319B198F2B9C003B649D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -343,6 +349,7 @@
 		704F7CF5197FA97700CEFE37 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				7057205B199891FA0049C764 /* OperationNetworkKit */,
 				70572043199881EF0049C764 /* STQuickKit */,
 				7057203719986EF60049C764 /* OpenUDID */,
 				7057203A19986EF60049C764 /* Reachability */,
@@ -562,6 +569,17 @@
 			path = STQuickKit;
 			sourceTree = "<group>";
 		};
+		7057205B199891FA0049C764 /* OperationNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				7057205C199892470049C764 /* XHHTTPClient.h */,
+				7057205D199892470049C764 /* XHHTTPClient.m */,
+				7057205E199892470049C764 /* XHOperationNetworkKit.h */,
+				7057205F199892470049C764 /* XHOperationNetworkKit.m */,
+			);
+			name = OperationNetworkKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -672,6 +690,7 @@
 				704F7D46197FA97700CEFE37 /* UIImage+MultiFormat.m in Sources */,
 				704F7D5F197FA97700CEFE37 /* Tool.m in Sources */,
 				704F7D63197FB84900CEFE37 /* KMP.m in Sources */,
+				70572061199892470049C764 /* XHOperationNetworkKit.m in Sources */,
 				704F7D51197FA97700CEFE37 /* UIImageView+LK.m in Sources */,
 				7057203619986E420049C764 /* NSString+STRegex.m in Sources */,
 				704F7D59197FA97700CEFE37 /* SVProgressHUDViewController.m in Sources */,
@@ -704,6 +723,7 @@
 				70572055199881EF0049C764 /* STRequest.m in Sources */,
 				704F7D4A197FA97700CEFE37 /* SDImageCache.m in Sources */,
 				704F7D48197FA97700CEFE37 /* ImageNSOperationViewController.m in Sources */,
+				70572060199892470049C764 /* XHHTTPClient.m in Sources */,
 				704F7CCE197FA89C00CEFE37 /* main.m in Sources */,
 				704F7D5E197FA97700CEFE37 /* zip.c in Sources */,
 				704F7D50197FA97700CEFE37 /* THProgressView.m in Sources */,
