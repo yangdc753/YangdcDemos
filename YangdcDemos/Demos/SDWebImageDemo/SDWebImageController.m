@@ -38,7 +38,7 @@
 //        [self configureView];
     }
 }
-- (IBAction)rload:(id)sender {
+- (IBAction)rload:(id __unused)sender {
     self.imageURL = [NSURL URLWithString:@"http://static2.dmcdn.net/static/video/666/645/43546666:jpeg_preview_source.jpg?20120412153140"];
     NSData *imageData = [NSData dataWithContentsOfURL:self.imageURL];
     NSRange range = NSMakeRange(0, imageData.length-1000);

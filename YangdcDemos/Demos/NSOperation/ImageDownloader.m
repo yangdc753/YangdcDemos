@@ -48,7 +48,7 @@
 
 // 接收到数据（增量）时
 
-- (void)connection:(NSURLConnection*)connection
+- (void)connection:(NSURLConnection* __unused)connection
     didReceiveData:(NSData*)data
 {
     [_data appendData:data];
@@ -58,7 +58,7 @@
     }
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection*)connection {
+- (void)connectionDidFinishLoading:(NSURLConnection* __unused)connection {
     if (self.delegate != nil)
     {
         UIImage *img = [[UIImage alloc] initWithData:self.data] ;
@@ -67,7 +67,7 @@
     _connection=nil;
 }
 
--(void)connection: (NSURLConnection *) connection didFailWithError: (NSError *) error
+-(void)connection: (NSURLConnection * __unused) connection didFailWithError: (NSError * __unused) error
 {
     _connection=nil;
 }

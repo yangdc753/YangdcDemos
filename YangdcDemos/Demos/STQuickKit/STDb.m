@@ -544,7 +544,7 @@ enum {
     return NO;
 }
 
-+ (NSString *)dbTypeConvertFromObjc_property_t:(objc_property_t)property
++ (NSString *)dbTypeConvertFromObjc_property_t:(objc_property_t __unused)property
 {
 //    NSString * attr = [[NSString alloc]initWithCString:property_getAttributes(property)  encoding:NSUTF8StringEncoding];
     

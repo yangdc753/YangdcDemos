@@ -68,7 +68,7 @@
     [request setHTTPMethod:methodStr];
 
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * __unused response, NSData *data, NSError *connectionError) {
         NSString *resultStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSDictionary *info = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         if (completionHandler) {

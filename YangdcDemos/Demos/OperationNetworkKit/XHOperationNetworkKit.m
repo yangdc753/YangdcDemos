@@ -104,7 +104,7 @@
 
 #pragma mark - NSURLConnectionDelegate Methods
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+- (void)connection:(NSURLConnection * __unused)connection didFailWithError:(NSError *)error
 {
     if (_failureHandler)
     {
@@ -117,7 +117,7 @@
 
 #pragma mark - NSURLConnectionDataDelegate Methods
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+- (void)connectionDidFinishLoading:(NSURLConnection * __unused)connection
 {
     NSHTTPURLResponse *response = (NSHTTPURLResponse *)_response;
     BOOL success = [[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)] containsIndex:[response statusCode]];
@@ -141,7 +141,7 @@
     [self setFinished:YES];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+- (void)connection:(NSURLConnection * __unused)connection didReceiveData:(NSData *)data
 {
     if (_progressHandler) {
         NSUInteger realLength = data.length;
@@ -159,7 +159,7 @@
     [_responseData appendData:data];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+- (void)connection:(NSURLConnection * __unused)connection didReceiveResponse:(NSURLResponse *)response
 {
     if (_progressHandler) {
         NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse *)response;

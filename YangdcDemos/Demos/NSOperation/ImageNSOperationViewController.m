@@ -38,13 +38,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)reload:(id)sender {
+- (IBAction)reload:(id __unused)sender {
     NSString *newUrl = [NSString stringWithFormat:@"http://static2.dmcdn.net/static/video/666/645/43546666:jpeg_preview_source.jpg?%d",(int)[NSDate timeIntervalSinceReferenceDate]];
     ImageDownloader *imageDownloader = [[ImageDownloader alloc]initWithURLString:newUrl];
     imageDownloader.delegate = self;
     [self.queue addOperation:imageDownloader];
 }
-- (void)imageDidFinished:(UIImage *)image para:(NSObject *)obj{
+- (void)imageDidFinished:(UIImage *)image para:(NSObject * __unused)obj{
     self.imageView.image = image;
 }
 
