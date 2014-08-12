@@ -851,6 +851,8 @@
 				GCC_PREFIX_HEADER = "YangdcDemos/YangdcDemos-Prefix.pch";
 				INFOPLIST_FILE = "YangdcDemos/YangdcDemos-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
+				"WARNING_CFLAGS[arch=*]" = "-Wextra";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -864,6 +866,7 @@
 				GCC_PREFIX_HEADER = "YangdcDemos/YangdcDemos-Prefix.pch";
 				INFOPLIST_FILE = "YangdcDemos/YangdcDemos-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

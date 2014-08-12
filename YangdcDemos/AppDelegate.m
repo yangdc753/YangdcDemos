@@ -41,7 +41,7 @@
     Method *m = class_copyMethodList(theClass,&outCount);
     
     NSLog(@"q%d",outCount);
-    for (int i = 0; i<outCount; i++) {
+    for (unsigned int i = 0; i<outCount; i++) {
         SEL a = method_getName(*(m+i));
         NSString *sn = NSStringFromSelector(a);
         NSLog(@"q%@",sn);

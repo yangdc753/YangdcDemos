@@ -229,7 +229,7 @@ enum {
     
     NSMutableString *sql_NSString = [[NSMutableString alloc] initWithFormat:@"insert into %@ values(?)", tableName];
     NSRange range = [sql_NSString rangeOfString:@"?"];
-    for (int i = 0; i < argNum - 1; i++) {
+    for (unsigned int i = 0; i < argNum - 1; i++) {
         [sql_NSString insertString:@",?" atIndex:range.location + 1];
     }
     
@@ -239,7 +239,7 @@ enum {
     
     const char *errmsg = NULL;
     if (sqlite3_prepare_v2(sqlite3DB, [sql_NSString UTF8String], -1, &stmt, &errmsg) == SQLITE_OK) {
-        for (int i = 1; i <= argNum; i++) {
+        for (unsigned int i = 1; i <= argNum; i++) {
             NSString * key = propertyArr[i - 1];
             
             if ([key isEqualToString:@"uid__"]) {
@@ -442,7 +442,7 @@ enum {
     unsigned int count;
     objc_property_t *properties = class_copyPropertyList(obj.class, &count);
     
-    for (int i = 0; i < count; i++) {
+    for (unsigned int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
         NSString * key = [[NSString alloc]initWithCString:property_getName(property)  encoding:NSUTF8StringEncoding];
         NSString *value = [NSString stringWithFormat:@"%@", [obj valueForKey:key]];
@@ -561,7 +561,7 @@ enum {
     unsigned int count;
     objc_property_t *properties = class_copyPropertyList(aClass, &count);
     
-    for (int i = 0; i < count; i++) {
+    for (unsigned int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
         NSString * key = [[NSString alloc]initWithCString:property_getName(property)  encoding:NSUTF8StringEncoding];
         NSString *type = [STDb dbTypeConvertFromObjc_property_t:property];
@@ -587,7 +587,7 @@ enum {
     unsigned int count;
     objc_property_t *properties = class_copyPropertyList(aClass, &count);
     
-    for (int i = 0; i < count; i++) {
+    for (unsigned int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
         NSString * key = [[NSString alloc]initWithCString:property_getName(property)  encoding:NSUTF8StringEncoding];
         [proName addObject:key];
@@ -604,7 +604,7 @@ enum {
     unsigned int count;
     objc_property_t *properties = class_copyPropertyList(aClass, &count);
     
-    for (int i = 0; i < count; i++) {
+    for (unsigned int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
         NSString *type = [STDb dbTypeConvertFromObjc_property_t:property];
         [proName addObject:type];

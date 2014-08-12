@@ -14,10 +14,10 @@
 //获取目录下
 + (NSArray*)getFilenamelistfromDirPath:(NSString *)dirPath{
     NSMutableArray *filenamelist = [NSMutableArray arrayWithCapacity:100];
-//    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
-//    for (NSString *filename in tmplist) {
-//        
-//    }
+    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
+    for (NSString *filename in tmplist) {
+        NSLog(@"%@",filename);
+    }
     return filenamelist;
 }
 
@@ -43,7 +43,7 @@
     return beginningOfWeek;
 }
 
-+ (void)doSound:(id)sender
++ (void)doSound
 {
     NSError *err;
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"soundeffect" ofType:@"wav"]] error:&err];
@@ -101,7 +101,10 @@
 {
     float fPadding = 16.0;
     CGSize constraint = CGSizeMake(txtView.contentSize.width - 10 - fPadding, CGFLOAT_MAX);
-    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:txtView.font, NSFontAttributeName,nil];
+    if (font == nil) {
+        font = txtView.font;
+    }
+    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName,nil];
     CGSize size = [txt boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:tdic context:nil].size;
     float fHeight = size.height + 16.0;
     return fHeight;
@@ -200,8 +203,28 @@
 
 //if ([MFMailComposeViewController canSendMail]) {
 
+//app评分跳转
+-(void)goToAppStore
+{
+    NSString *str = [NSString stringWithFormat:
+                     @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d",1];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+}
 
-
+//颜色转变成图片
+- (UIImage *)createImageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
+//强行关闭app的方法
+//[[UIApplication sharedApplication] performSelector:@selector(terminateWithSuccess)];
 @end
 
 bool checkOnlineStatus(){

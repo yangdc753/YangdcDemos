@@ -40,7 +40,7 @@
 //    QLPreviewController *qlprview = [[QLPreviewController alloc]init];
 //    qlprview.delegate = self;
 //    qlprview.dataSource = self;
-//    [self addObserver:self forKeyPath:@"self.historyDetailController.retainCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self addObserver:self forKeyPath:@"self.historyDetailController.retainCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
   
     
 }

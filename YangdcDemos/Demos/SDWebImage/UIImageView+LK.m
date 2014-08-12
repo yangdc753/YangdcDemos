@@ -18,10 +18,12 @@
     
 	Method origMethod = class_getInstanceMethod(self, origSel_);
 	if (!origMethod) {
+        *error_ = [[NSError alloc]initWithDomain:@"origMethod" code:1 userInfo:nil];
 		return NO;
 	}
 	Method altMethod = class_getInstanceMethod(self, altSel_);
 	if (!altMethod) {
+        *error_ = [[NSError alloc]initWithDomain:@"altMethod" code:1 userInfo:nil];
 		return NO;
 	}
 	

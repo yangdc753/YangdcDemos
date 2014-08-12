@@ -11,7 +11,7 @@
 @implementation KMP
 
 +(char)string:(NSString *)str indexOf:(NSInteger)index{
-    if (index >= str.length) {
+    if ((NSUInteger)index >= str.length) {//
         return '\0';
     }
     return [str characterAtIndex:index];
