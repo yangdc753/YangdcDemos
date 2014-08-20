@@ -546,7 +546,7 @@ enum {
 
 + (NSString *)dbTypeConvertFromObjc_property_t:(objc_property_t __unused)property
 {
-//    NSString * attr = [[NSString alloc]initWithCString:property_getAttributes(property)  encoding:NSUTF8StringEncoding];
+    NSString * attr = [[NSString alloc]initWithCString:property_getAttributes(property)  encoding:NSUTF8StringEncoding];
     
     return DBText;
 }
@@ -564,7 +564,7 @@ enum {
     for (unsigned int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
         NSString * key = [[NSString alloc]initWithCString:property_getName(property)  encoding:NSUTF8StringEncoding];
-        NSString *type = [STDb dbTypeConvertFromObjc_property_t:property];
+        NSString * type = [STDb dbTypeConvertFromObjc_property_t:property];
         
         NSString *proStr;
         if ([key isEqualToString:@"uid__"]) {
@@ -576,7 +576,7 @@ enum {
         [proName addObject:proStr];
     }
     
-    if (aClass == [STDbObject class]) {
+    if (aClass == [STDbObject class] || aClass == [NSObject class]) {
         return;
     }
     [STDb class:[aClass superclass] getPropertyNameList:proName];

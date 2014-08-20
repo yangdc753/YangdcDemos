@@ -118,16 +118,16 @@
     }];
 }
 
-- (void)keyboardWillShowWithKeyboardFrame:(CGRect)frame
-                              andDuration:(NSTimeInterval)duration
-                               animations:(void (^)(void))animations
+- (void)keyboardWillShowWithKeyboardFrame:(__unused CGRect)frame
+                              andDuration:(__unused NSTimeInterval)duration
+                               animations:(__unused void (^)(void))animations
 {
 
 }
 
-- (void)keyboardWillHideWithKeyboardFrame:(CGRect)frame
-                              andDuration:(NSTimeInterval)duration
-                               animations:(void (^)(void))animations
+- (void)keyboardWillHideWithKeyboardFrame:(__unused CGRect)frame
+                              andDuration:(__unused NSTimeInterval)duration
+                               animations:(__unused void (^)(void))animations
 {
     
 }

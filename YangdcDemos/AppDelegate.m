@@ -10,6 +10,10 @@
 #import "TestViewController.h"
 #import <objc/runtime.h>
 #import "Reachability.h"
+#import "STDb.h"
+#import "OpenUDID.h"
+#import "Localization.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication * __unused)application didFinishLaunchingWithOptions:(NSDictionary * __unused)launchOptions
@@ -20,6 +24,7 @@
 //    [self redirectNSlogToDocumentFolder];
 //    [self test];
     // Override point for customization after application launch.
+    [STDb createDbTable:[Localization class]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
     [self.window makeKeyAndVisible];
