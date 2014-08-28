@@ -50,10 +50,13 @@ enum {
     DBObjAttrDictionary,
 };
 
-#define DBText  @"text"
-#define DBInt   @"integer"
-#define DBFloat @"real"
-#define DBData  @"blob"
+#define     DBText      @"text"
+#define     DBInt       @"integer"
+#define     DBDouble    @"double"
+#define     DBData      @"blob"
+#define     DBDate      @"text"
+#define     DBBoolean   @"boolean"
+
 
 @interface STDb()
 
@@ -71,6 +74,7 @@ enum {
  */
 + (instancetype)shareDb
 {
+    
     static STDb *stdb;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -263,6 +267,9 @@ enum {
             else if ([column_type_string isEqualToString:@"integer"]) {
                 NSString *column_value = value;
                 sqlite3_bind_int(stmt, i, [column_value intValue]);
+            }else if ([column_type_string isEqualToString:@"double"]){
+                double column_value = [value doubleValue];
+                sqlite3_bind_double(stmt, i, column_value);
             }
         }
         int rc = sqlite3_step(stmt);
@@ -544,10 +551,27 @@ enum {
     return NO;
 }
 
-+ (NSString *)dbTypeConvertFromObjc_property_t:(objc_property_t __unused)property
++ (NSString *)dbTypeConvertFromObjc_property_t:(objc_property_t)property
 {
     NSString * attr = [[NSString alloc]initWithCString:property_getAttributes(property)  encoding:NSUTF8StringEncoding];
-    
+    if ([attr hasPrefix:@"Tc,"]) {
+        return DBBoolean;
+    }
+    if ([attr hasPrefix:@"T@\"NSString\","] || [attr hasPrefix:@"T@\"NSMutableString\","]) {
+        return DBText;
+    }
+    if ([attr hasPrefix:@"T@\"NSInteger\","] || [attr hasPrefix:@"T@\"NSNumber\","] || [attr hasPrefix:@"Ti,"]) {
+        return DBInt;
+    }
+    if ([attr hasPrefix:@"Tf,"] || [attr hasPrefix:@"Td,"]) {
+        return DBDouble;
+    }
+    if ([attr hasPrefix:@"T@\"NSData\","]) {
+        return DBData;
+    }
+    if ([attr hasPrefix:@"T@\"NSDate\","]) {
+        return DBDate;
+    }
     return DBText;
 }
 
@@ -576,7 +600,7 @@ enum {
         [proName addObject:proStr];
     }
     
-    if (aClass == [STDbObject class] || aClass == [NSObject class]) {
+    if (aClass == [STDbObject class] || [aClass superclass] == [NSObject class]) {
         return;
     }
     [STDb class:[aClass superclass] getPropertyNameList:proName];

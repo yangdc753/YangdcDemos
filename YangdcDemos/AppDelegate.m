@@ -12,7 +12,7 @@
 #import "Reachability.h"
 #import "STDb.h"
 #import "OpenUDID.h"
-#import "Localization.h"
+#import "Model.h"
 
 @implementation AppDelegate
 
@@ -24,7 +24,15 @@
 //    [self redirectNSlogToDocumentFolder];
 //    [self test];
     // Override point for customization after application launch.
-    [STDb createDbTable:[Localization class]];
+    Model *m = [[Model alloc]init];
+    m.date = [NSDate date];
+    m.nsstring = @"1111";
+    m.f = 10.0f;
+    m.data = [NSData data];
+    m.nsnumber = @(213123);
+//    [m insertToDb];
+    [m updateToDbsWhere:@"f = 1"];
+//    [STDb createDbTable:[Model class]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
     [self.window makeKeyAndVisible];

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		703A7B47198F290D00E6ACFD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 703A7B45198F290D00E6ACFD /* Model.xcdatamodeld */; };
 		70449FC51980FC1800587F9D /* YDCImageDowload.m in Sources */ = {isa = PBXBuildFile; fileRef = 70449FC41980FC1800587F9D /* YDCImageDowload.m */; };
+		704A099719A598AB002B14C9 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 704A099619A598AB002B14C9 /* Model.m */; };
 		704C57801989DC1A003EA19B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704C577F1989DC1A003EA19B /* QuickLook.framework */; };
 		704F7CC2197FA89C00CEFE37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC1197FA89C00CEFE37 /* Foundation.framework */; };
 		704F7CC4197FA89C00CEFE37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704F7CC3197FA89C00CEFE37 /* CoreGraphics.framework */; };
@@ -93,6 +94,8 @@
 		703A7B46198F290D00E6ACFD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		70449FC31980FC1800587F9D /* YDCImageDowload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YDCImageDowload.h; path = NSOperationImageDowload/YDCImageDowload.h; sourceTree = "<group>"; };
 		70449FC41980FC1800587F9D /* YDCImageDowload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YDCImageDowload.m; path = NSOperationImageDowload/YDCImageDowload.m; sourceTree = "<group>"; };
+		704A099519A598AB002B14C9 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		704A099619A598AB002B14C9 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		704C577F1989DC1A003EA19B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		704F7CBE197FA89C00CEFE37 /* YangdcDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YangdcDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704F7CC1197FA89C00CEFE37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -365,6 +368,8 @@
 				704F7D25197FA97700CEFE37 /* SDWebImageDemo */,
 				704F7D2B197FA97700CEFE37 /* SVProgressHUD */,
 				704F7D32197FA97700CEFE37 /* ZipArchive */,
+				704A099519A598AB002B14C9 /* Model.h */,
+				704A099619A598AB002B14C9 /* Model.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				704F7D45197FA97700CEFE37 /* UIImage+GIF.m in Sources */,
 				704F7D47197FA97700CEFE37 /* ImageDownloader.m in Sources */,
 				70572053199881EF0049C764 /* STDb.m in Sources */,
+				704A099719A598AB002B14C9 /* Model.m in Sources */,
 				704F7D42197FA97700CEFE37 /* NSString+Base64.m in Sources */,
 				704F7D4F197FA97700CEFE37 /* SDWebImageManager.m in Sources */,
 				704F7D46197FA97700CEFE37 /* UIImage+MultiFormat.m in Sources */,
